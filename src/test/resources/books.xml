@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <BOOK id="1" author="Craig Larman" title="Applying UML and Patterns" />
+    <BOOK id="2" author="Stuart Halloway" title="Programming Clojure" />
+</dataset>
