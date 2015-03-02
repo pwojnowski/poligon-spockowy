@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
 import org.unitils.dbunit.annotation.DataSet
+import org.unitils.dbunit.datasetloadstrategy.impl.CleanInsertLoadStrategy
 import spock.lang.Specification
 import spock.unitils.UnitilsSupport
 
@@ -22,7 +23,7 @@ class BookRepositoryUnitilsTest extends Specification {
         repository != null
     }
 
-    @DataSet("/books.xml")
+    @DataSet(value = "/books.xml", loadStrategy = CleanInsertLoadStrategy)
     def 'should load have books loaded through DbUnit'() {
         when:
         def books = repository.findAll()

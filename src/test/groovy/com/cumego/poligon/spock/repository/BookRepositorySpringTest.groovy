@@ -5,6 +5,7 @@ import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.test.context.ContextConfiguration
+import org.springframework.transaction.annotation.Transactional
 import spock.lang.Specification
 
 @ContextConfiguration(locations = '/META-INF/spring/applicationContext.xml')
@@ -20,6 +21,7 @@ class BookRepositorySpringTest extends Specification {
         repository != null
     }
 
+    @Transactional
     def 'should add a book'() {
         given:
         def book = new Book(author: "Robert C. Martin", title: "Clean code")
