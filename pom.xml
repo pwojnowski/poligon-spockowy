@@ -69,6 +69,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.github.springtestdbunit</groupId>
+            <artifactId>spring-test-dbunit</artifactId>
+            <version>1.2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.unitils</groupId>
             <artifactId>unitils-core</artifactId>
             <version>${unitils.version}</version>
